@@ -1,0 +1,20 @@
+# Node
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+*.log
+
+# Netlify settings (si usas CLI local)
+.netlify/
+
+# Optional: evitar backups de editores
+*~
