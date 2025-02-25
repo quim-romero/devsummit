@@ -1,8 +1,12 @@
 // Wait for DOM to be ready
 document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimation();
+  initScrollReveal();
 });
 
+/**
+ * Inject Lottie or GSAP animation into Hero section.
+ */
 function initHeroAnimation() {
   const container = document.getElementById("hero-animation");
   if (!container) return;
@@ -13,4 +17,36 @@ function initHeroAnimation() {
       Animation coming soon
     </div>
   `;
+}
+
+//Lottie Animation Initialization
+function initHeroAnimation() {
+  const container = document.getElementById("hero-animation");
+  if (!container || typeof lottie === "undefined") return;
+
+  lottie.loadAnimation({
+    container,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "./assets/animations/dev.json",
+  });
+}
+
+/**
+ * Animate reveal effects on scroll for elements with data-reveal
+ */
+function initScrollReveal() {
+  if (typeof ScrollReveal === "undefined") return;
+
+  ScrollReveal().reveal("[data-reveal]", {
+    distance: "40px",
+    origin: "bottom",
+    duration: 800,
+    easing: "ease-out",
+    interval: 100,
+    opacity: 0,
+    reset: false,
+    cleanup: true,
+  });
 }
