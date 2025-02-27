@@ -310,11 +310,193 @@
           </div>
         </div>
       </section>
+
+      <!-- FAQ Section -->
+      <section
+        id="faq"
+        class="py-24 sm:py-32 bg-white dark:bg-dark-background border-t border-slate-200 dark:border-slate-700"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-muted max-w-2xl mx-auto">
+              Everything you need to know before joining DevSummit 2025.
+            </p>
+          </div>
+
+          <div class="space-y-6" x-data="{ open: null }">
+            <!-- FAQ item -->
+            <div class="border-b border-slate-200 dark:border-slate-600 pb-4">
+              <button
+                class="w-full text-left flex justify-between items-center text-lg font-medium hover:text-primary transition"
+                @click="open === 1 ? open = null : open = 1"
+              >
+                <span>Will the talks be recorded?</span>
+                <svg
+                  :class="open === 1 ? 'rotate-180' : ''"
+                  class="w-5 h-5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                x-show="open === 1"
+                x-collapse
+                class="mt-2 text-muted text-sm"
+              >
+                Yes, all sessions will be recorded and shared with registered
+                attendees.
+              </div>
+            </div>
+
+            <!-- FAQ item -->
+            <div class="border-b border-slate-200 dark:border-slate-600 pb-4">
+              <button
+                class="w-full text-left flex justify-between items-center text-lg font-medium hover:text-primary transition"
+                @click="open === 2 ? open = null : open = 2"
+              >
+                <span>Is there a refund policy?</span>
+                <svg
+                  :class="open === 2 ? 'rotate-180' : ''"
+                  class="w-5 h-5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                x-show="open === 2"
+                x-collapse
+                class="mt-2 text-muted text-sm"
+              >
+                Absolutely. You can request a full refund up to 7 days before
+                the event.
+              </div>
+            </div>
+            <!-- FAQ item -->
+            <div class="border-b border-slate-200 dark:border-slate-600 pb-4">
+              <button
+                class="w-full text-left flex justify-between items-center text-lg font-medium hover:text-primary transition"
+                @click="open === 3 ? open = null : open = 3"
+              >
+                <span>Can I switch from Free to Pro later?</span>
+                <svg
+                  :class="open === 3 ? 'rotate-180' : ''"
+                  class="w-5 h-5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                x-show="open === 3"
+                x-collapse
+                class="mt-2 text-muted text-sm"
+              >
+                Yes. You can upgrade at any time through your confirmation email
+                or account page.
+              </div>
+            </div>
+
+            <!-- FAQ item -->
+            <div class="border-b border-slate-200 dark:border-slate-600 pb-4">
+              <button
+                class="w-full text-left flex justify-between items-center text-lg font-medium hover:text-primary transition"
+                @click="open === 4 ? open = null : open = 4"
+              >
+                <span>Will I get a certificate?</span>
+                <svg
+                  :class="open === 4 ? 'rotate-180' : ''"
+                  class="w-5 h-5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                x-show="open === 4"
+                x-collapse
+                class="mt-2 text-muted text-sm"
+              >
+                All Pro and VIP attendees will receive a personalized
+                certificate of participation.
+              </div>
+            </div>
+
+            <!-- FAQ item -->
+            <div class="border-b border-slate-200 dark:border-slate-600 pb-4">
+              <button
+                class="w-full text-left flex justify-between items-center text-lg font-medium hover:text-primary transition"
+                @click="open === 5 ? open = null : open = 5"
+              >
+                <span>Do I need to install anything?</span>
+                <svg
+                  :class="open === 5 ? 'rotate-180' : ''"
+                  class="w-5 h-5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                x-show="open === 5"
+                x-collapse
+                class="mt-2 text-muted text-sm"
+              >
+                No installations are required. You’ll get a browser-based access
+                link for the entire experience.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 
   <!-- Script -->
   <script src="https://unpkg.com/lottie-web/build/player/lottie.min.js"></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+  ></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./js/scripts.js" defer></script>
 </html>
