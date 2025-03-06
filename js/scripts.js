@@ -4,33 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
 });
 
-/**
- * Inject Lottie or GSAP animation into Hero section.
- */
 function initHeroAnimation() {
   const container = document.getElementById("hero-animation");
   if (!container) return;
 
-  // Placeholder fallback content
-  container.innerHTML = `
-    <div class="w-full h-full flex items-center justify-center text-muted text-sm italic">
-      Animation coming soon
-    </div>
-  `;
-}
-
-//Lottie Animation Initialization
-function initHeroAnimation() {
-  const container = document.getElementById("hero-animation");
-  if (!container || typeof lottie === "undefined") return;
-
-  lottie.loadAnimation({
-    container,
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "./assets/animations/dev.json",
-  });
+  if (typeof lottie !== "undefined") {
+    lottie.loadAnimation({
+      container,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "./assets/animations/dev.json",
+    });
+  } else {
+    container.innerHTML = `
+      <div class="w-full h-full flex items-center justify-center text-muted text-sm italic">
+        Animation coming soon
+      </div>
+    `;
+  }
 }
 
 /**
