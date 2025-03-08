@@ -12,7 +12,6 @@
       property="og:description"
       content="The ultimate event for ambitious developers."
     />
-    <meta property="og:image" content="/assets/preview.png" />
     <meta name="theme-color" content="#6366f1" />
     <title>DevSummit 2025</title>
     <link rel="stylesheet" href="./dist/style.css" />
@@ -37,29 +36,47 @@
           <a href="#" class="text-xl font-bold tracking-tight text-primary"
             >DevSummit</a
           >
-          <!-- Placeholder for mobile nav toggle -->
-          <nav>
-            <ul class="hidden md:flex items-center space-x-6">
-              <li>
-                <a href="#speakers" class="hover:text-primary transition"
-                  >Speakers</a
-                >
-              </li>
-              <li>
-                <a href="#schedule" class="hover:text-primary transition"
-                  >Schedule</a
-                >
-              </li>
-              <li>
-                <a href="#pricing" class="hover:text-primary transition"
-                  >Pricing</a
-                >
-              </li>
-              <li>
-                <a href="#faq" class="hover:text-primary transition">FAQ</a>
-              </li>
-            </ul>
-          </nav>
+
+          <!-- Dark mode toggle + desktop nav -->
+          <div class="flex items-center space-x-4">
+            <nav>
+              <ul class="hidden md:flex items-center space-x-6">
+                <li>
+                  <a href="#speakers" class="hover:text-primary transition"
+                    >Speakers</a
+                  >
+                </li>
+                <li>
+                  <a href="#schedule" class="hover:text-primary transition"
+                    >Schedule</a
+                  >
+                </li>
+                <li>
+                  <a href="#pricing" class="hover:text-primary transition"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="#faq" class="hover:text-primary transition">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Toggle dark mode button -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+              aria-label="Toggle dark mode"
+            >
+              <svg
+                id="theme-icon"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              ></svg>
+            </button>
+          </div>
         </div>
       </div>
     </header>
