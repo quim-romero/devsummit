@@ -5,6 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/input.css -o ./dist/style.css --minify"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
